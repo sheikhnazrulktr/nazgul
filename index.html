@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story — A Cinematic Love Story</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader"><div class="loader-heart">♥</div><p>Loading our story...</p></div>
+<div class="grain"></div>
+<div class="hearts"></div>
+
+<!-- MUSIC: put your MP3 in the music folder and change the filename below -->
+<audio id="music" loop>
+    <source src="music/song.mp3" type="audio/mpeg">
+</audio>
+<button id="musicBtn" onclick="toggleMusic()">♫</button>
+
+<section class="scene active" id="scene1">
+    <div class="vignette"></div>
+    <div class="scene-content opening">
+        <p class="eyebrow">A STORY WORTH TELLING</p>
+        <h1>It all started<br><span>with you.</span></h1>
+        <p class="subtitle">Some stories are written in books.<br>Ours is written in memories.</p>
+        <button class="cinema-btn" onclick="nextScene('scene2')">BEGIN THE STORY <span>→</span></button>
+    </div>
+    <div class="scroll">SCROLL / CLICK TO CONTINUE</div>
+</section>
+
+<section class="scene" id="scene2">
+    <div class="image-bg" style="background-image:url('images/photo1.jpg')"></div>
+    <div class="vignette"></div>
+    <div class="scene-content left">
+        <p class="chapter">CHAPTER 01</p>
+        <h2>The First<br><em>Moment</em></h2>
+        <div class="line"></div>
+        <p>Maybe it looked like an ordinary day.<br>But somehow, meeting you made it different.</p>
+        <button class="cinema-btn" onclick="nextScene('scene3')">NEXT MEMORY →</button>
+    </div>
+</section>
+
+<section class="scene" id="scene3">
+    <div class="image-bg" style="background-image:url('images/photo2.jpg')"></div>
+    <div class="vignette"></div>
+    <div class="scene-content right">
+        <p class="chapter">CHAPTER 02</p>
+        <h2>Little Moments.<br><em>Big Memories.</em></h2>
+        <div class="line"></div>
+        <p>The conversations, the laughs,<br>the little things that slowly became important.</p>
+        <button class="cinema-btn" onclick="nextScene('scene4')">NEXT MEMORY →</button>
+    </div>
+</section>
+
+<section class="scene" id="scene4">
+    <div class="image-bg" style="background-image:url('images/photo3.jpg')"></div>
+    <div class="vignette"></div>
+    <div class="scene-content center">
+        <p class="chapter">CHAPTER 03</p>
+        <h2>And Then<br><em>There Was You.</em></h2>
+        <p class="quote">“Some people enter your life quietly,<br>and somehow become your favorite part of it.”</p>
+        <button class="cinema-btn" onclick="nextScene('scene5')">ONE LAST CHAPTER →</button>
+    </div>
+</section>
+
+<section class="scene dark" id="scene5">
+    <div class="scene-content center">
+        <p class="chapter">CHAPTER 04</p>
+        <h2>Before I Ask You<br><em>One Thing...</em></h2>
+        <p>There is something I've wanted to say.</p>
+        <div class="count">03</div>
+        <button class="cinema-btn" onclick="startProposal()">CONTINUE →</button>
+    </div>
+</section>
+
+<section class="scene proposal" id="scene6">
+    <div class="stars"></div>
+    <div class="scene-content center proposal-content">
+        <div class="ring">💍</div>
+        <p class="chapter">THE FINAL SCENE</p>
+        <h2>Will You Be<br><em>Mine?</em></h2>
+        <p class="proposal-text">Not just for today.<br>But for all the beautiful chapters still waiting to be written.</p>
+        <div class="answer-buttons">
+            <button onclick="yesAnswer()">YES, I WILL ❤️</button>
+            <button onclick="yesAnswer()">YES, ALWAYS 🥰</button>
+        </div>
+    </div>
+</section>
+
+<section class="scene ending" id="scene7">
+    <div class="image-bg" style="background-image:url('images/photo4.jpg')"></div>
+    <div class="vignette"></div>
+    <div class="scene-content center">
+        <div class="big-heart">♥</div>
+        <p class="chapter">THE BEGINNING OF FOREVER</p>
+        <h2>Thank You<br><em>For Choosing Us.</em></h2>
+        <p class="final-text">Whatever comes next,<br>I hope we keep making beautiful memories together.</p>
+        <p class="credits">OUR STORY • CHAPTER ONE • TO BE CONTINUED...</p>
+        <button class="cinema-btn" onclick="location.reload()">WATCH AGAIN ↻</button>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
